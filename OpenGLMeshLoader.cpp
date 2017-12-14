@@ -454,7 +454,7 @@ void myDisplay(void)
     //win lose
 	if(win || lose){
 	glPushMatrix();
-	glTranslated(15,10,20);
+	glTranslated(15,10,0.5);
 	glScaled(30,20,30);
 	glRotated(-90,1,0,0);
 	if(win){
@@ -637,13 +637,13 @@ void LoadAssets()
 void Timer(int value){
 	levelUpdate();
 	backgroundAnim = backgroundAnim + 0.0020;
-	chickenForward = chickenForward + 0.015;
+	chickenForward = chickenForward + 0.02;
 	angle = angle + 0.01;
 	check_collision();
 	if(first_person){
 		Eye.x=15+spaceShipLocationX; 
 		Eye.y=5+spaceShipLocationY;
-		Eye.z=23;
+		Eye.z=31;
 		At.x=15+spaceShipLocationX;
 		At.y=5+spaceShipLocationY;
 		At.z=0;
